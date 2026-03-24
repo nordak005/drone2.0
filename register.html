@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Register | SRMIST Drone COE</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#0a0a0a',
+                        surface: '#121212',
+                        elevated: '#1a1a1a',
+                        primary: '#3b82f6',
+                        muted: '#a3a3a3',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #fafafa;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Ambient Glow Backgrounds */
+        .ambient-glow {
+            position: fixed;
+            top: -20vh;
+            left: -10vw;
+            width: 70vw;
+            height: 70vh;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Refined Premium Card UI */
+        .premium-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Sleek Industrial Buttons */
+        .btn-primary {
+            background-color: #ffffff;
+            color: #000000;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: rgba(255, 255, 255, 0.85);
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Sleek Form Inputs */
+        .form-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            padding: 14px 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .form-input:focus {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
+        }
+        
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-label {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #a3a3a3;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        /* Dark mode dropdown overrides */
+        select option {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        
+        /* Focus styles for select to match inputs */
+        select:focus-visible {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-gray-100 font-sans min-h-screen flex flex-col items-center justify-center p-6 relative overflow-x-hidden">
+
+    <div class="ambient-glow"></div>
+    <div class="ambient-glow" style="top: auto; bottom: -20vh; left: auto; right: -10vw; background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 60%);"></div>
+
+    <a href="index.html" class="absolute top-8 left-8 flex items-center gap-2 text-muted hover:text-white transition-colors duration-300 text-[13px] font-medium tracking-wide z-20">
+        <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+        Return to Home
+    </a>
+
+    <div class="w-full max-w-lg premium-card p-10 md:p-12 z-10 animate-fade-in-up my-12">
+        <div class="text-center mb-10">
+            <span class="text-white/50 font-medium tracking-[0.15em] text-[10px] uppercase mb-4 inline-block border border-white/10 px-3 py-1 rounded-full">Recruitment</span>
+            <h1 class="text-3xl font-semibold tracking-tight text-white mb-2">Join the Lab</h1>
+            <p class="text-muted text-sm font-light">Enter your details to register for the Center of Excellence in Drone and UAV.</p>
+        </div>
+
+        <form class="space-y-6" action="#" method="POST">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4">
+                <div>
+                    <label class="form-label" for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Rajesh" required>
+                </div>
+                <div>
+                    <label class="form-label" for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Kumar" required>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label" for="email">Institutional Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="rk1234@srmist.edu.in" required>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4">
+                <div>
+                    <label class="form-label" for="regNo">Registration Number</label>
+                    <input type="text" id="regNo" name="regNo" class="form-input" placeholder="RA21110..." required>
+                </div>
+                <div>
+                    <label class="form-label" for="year">Year of Study</label>
+                    <div class="relative">
+                        <select id="year" name="year" class="form-input appearance-none text-white/80" required>
+                            <option value="" disabled selected>Select year...</option>
+                            <option value="1">1st Year</option>
+                            <option value="2">2nd Year</option>
+                            <option value="3">3rd Year</option>
+                            <option value="4">4th Year</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-white/50">
+                            <span class="material-symbols-outlined text-[16px]">expand_more</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label" for="domain">Domain of Interest</label>
+                <div class="relative">
+                    <select id="domain" name="domain" class="form-input appearance-none text-white/80" required>
+                        <option value="" disabled selected>Select an area...</option>
+                        <option value="ai">AI & Computer Vision</option>
+                        <option value="aero">Aerodynamics & CFD</option>
+                        <option value="propulsion">Propulsion Systems</option>
+                        <option value="embedded">Embedded Systems & Controls</option>
+                        <option value="design">CAD & Additive Manufacturing</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-white/50">
+                        <span class="material-symbols-outlined text-[16px]">expand_more</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <label class="form-label" for="experience">Prior Experience / Projects (Optional)</label>
+                <textarea id="experience" name="experience" class="form-input min-h-[100px] resize-y" placeholder="Briefly describe any relevant experience or projects..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary w-full py-4 rounded-xl font-medium flex items-center justify-center gap-2 text-sm mt-10 cursor-pointer shadow-lg">
+                Submit Application
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>
